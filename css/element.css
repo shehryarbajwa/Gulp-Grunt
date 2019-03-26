@@ -1,6 +1,8 @@
 body {
   text-align: center;
-  background-color: #a62626; }
+  background-color: #ebc526; }
 
 h1 {
-  background-color: #a62626; }
+  color: #1966c1;
+  font-size: 72px;
+}
