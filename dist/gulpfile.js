@@ -1,5 +1,3 @@
-
-
 const gulp = require('gulp');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
@@ -32,15 +30,17 @@ gulp.task('styles', function() {
 		.pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function(){
-		gulp.src('js/**/*.js')
-		.pipe(gulp.dest('dist/js'));
-})
-gulp.task('scripts-dist', function(){
-	.pipe(concat('all.js'));
-	gulp.src('js/**/*.js')
-	.pipe(gulp.dest('dist/js'));
-})
+gulp.task('scripts', function() {
+  return gulp.src('./lib/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('scripts-dist', function() {
+  return gulp.src('./lib/*.js')
+    .pipe(concat('all.js'))
+    .pipe(gulp.dest('./dist/'));
+});
 
 gulp.task('copy-html', function(){
 	.pipe(concat('all.js'));
